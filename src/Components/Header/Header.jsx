@@ -1,8 +1,19 @@
+import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
+
+    const links = <>
+
+    <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to="/listedBooks">Listed Books</NavLink></li>
+    <li><NavLink to="/pagesRead">Pages to Read</NavLink></li>
+    
+    </>
+
+
     return (
-        <div className="navbar bg-base-100 mt-[68px]">
+        <div className="navbar bg-base-100 mt-[68px] w-[90%] mx-auto">
         <div className="navbar-start">
 
           <div className="dropdown">
@@ -11,24 +22,20 @@ const Header = () => {
             </div>
 
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Home</a></li>
-              <li><a>Listed Books</a></li>
-              <li><a>Pages to Read</a></li>
+             {links}
             </ul>
 
           </div>
-          <a className="btn btn-ghost text-xl">Book Vibe</a>
+          <a className="btn btn-ghost text-[#131313] text-[28px]">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>Listed Books</a></li>
-            <li><a>Pages to Read</a></li>
+            {links}
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <a className="btn">Sign In</a>
-          <a className="btn">Sign Up</a>
+          <a className="btn text-[#FFF] text-[18px] bg-[#23BE0A] ">Sign In</a>
+          <a className="btn text-[#FFF] text-[18px] bg-[#59C6D2]">Sign Up</a>
         </div>
       </div>
     );

@@ -9,16 +9,23 @@ import {
 } from "react-router-dom";
 import Root from './Components/Roots/Root';
 import Home from './Components/Home/Home';
+import Book from './Components/Books/Book';
+import Error from './Components/Error Page/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+      },
+      {
+        path: "/listedBooks",
+        element: <Book></Book>,
       }
     ]
   }
