@@ -1,4 +1,4 @@
-import { MdStarBorder } from "react-icons/md";
+
 
 import React, { useEffect, useState } from "react";
 import ListedBooks from "../Listed Books/ListedBooks";
@@ -22,6 +22,7 @@ const Book = () => {
           Books {book.length}
         </h2>
       </div>
+
   <div>
         {
         book.map(booksList => <ListedBooks bookList={booksList}></ListedBooks>)  
@@ -36,7 +37,7 @@ const Book = () => {
 
 export default Book;
 
-{
+
   /* <div className="book-card">
 <div className="card w-96 bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
@@ -74,4 +75,4 @@ export default Book;
   </div>
 </div>
 </div> */
-}
+
