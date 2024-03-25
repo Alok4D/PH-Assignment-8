@@ -1,0 +1,80 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "great-gatsby.jpg",
+      "review": "The Great Gatsby is a novel by American author F. Scott Fitzgerald. Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby, and Gatsby's obsession with Nick's cousin Daisy Buchanan. The novel explores themes of decadence, idealism, resistance to change, social upheaval, and excess, creating a portrait of the Roaring Twenties that has been described as a cautionary tale regarding the American Dream. The book received mixed reviews upon its publication in 1925, but over time, it has become widely regarded as a literary classic. Fitzgerald's writing style, characterized by vivid imagery and lyrical prose, contributes to the novel's enduring appeal.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Classic",
+      "tags": ["Fiction", "Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "to-kill-a-mockingbird.jpg",
+      "review": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature. The plot and characters are loosely based on Lee's observations of her family, her neighbors, and an event that occurred near her hometown of Monroeville, Alabama, in 1936, when she was ten. The novel is renowned for its warmth and humor, despite dealing with serious issues such as racial inequality and rape. The narrator's father, Atticus Finch, has served as a moral hero for many readers and as a model of integrity for lawyers. Historically, the book's anti-racist themes have been controversial, leading to occasional attempts to have it banned from libraries and classrooms. Despite this, it remains a staple of American literature curricula and a beloved novel worldwide.",
+      "totalPages": 281,
+      "rating": 4.8,
+      "category": "Classic",
+      "tags": ["Fiction", "Legal", "Coming-of-age"],
+      "publisher": "J.B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "1984.jpg",
+      "review": "1984 is a dystopian novel by George Orwell published in 1949. The story takes place in an imagined future where the world is ruled by three superpowers locked in a perpetual war. The government, led by the Party and its leader Big Brother, exercises complete control over every aspect of people's lives, using surveillance, propaganda, and manipulation to maintain power. The protagonist, Winston Smith, works for the Party and becomes disillusioned with its oppressive regime, leading him to rebel against the system. The novel explores themes of totalitarianism, censorship, surveillance, and the loss of individuality, offering a chilling vision of a future society where freedom and truth are suppressed. Despite being written over seventy years ago, 1984 remains relevant today, serving as a warning against the dangers of authoritarianism and the erosion of civil liberties.",
+      "totalPages": 328,
+      "rating": 4.6,
+      "category": "Dystopian",
+      "tags": ["Fiction", "Political", "Social Commentary"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "pride-and-prejudice.jpg",
+      "review": "Pride and Prejudice is a novel of manners by Jane Austen, first published in 1813. The story follows the main character, Elizabeth Bennet, as she deals with issues of manners, upbringing, morality, education, and marriage in the society of the landed gentry of early 19th-century England. Elizabeth is the second of five daughters of a country gentleman living near the fictional town of Meryton in Hertfordshire, near London. Though the story is set at the turn of the 19th century, it retains a fascination for modern readers, continuing near the top of lists of 'most loved books'. It has become one of the most popular novels in English literature and receives considerable attention from literary scholars. Modern interest in the book has resulted in a number of dramatic adaptations and an abundance of novels and stories imitating Austen's memorable characters or themes.",
+      "totalPages": 279,
+      "rating": 4.7,
+      "category": "Romance",
+      "tags": ["Fiction", "Regency", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "catcher-in-the-rye.jpg",
+      "review": "The Catcher in the Rye is a novel by J.D. Salinger, first published in 1951. The story is set around the 1950s and narrated by Holden Caulfield, a young man who has been expelled from prep school. The novel details two days in the life of Holden Caulfield after he has been expelled from prep school. From the various people Holden speaks to and meets, we learn about his brother Allie who died of leukemia, his older brother D.B., who is a successful Hollywood writer, his younger sister Phoebe, his former girlfriend Jane Gallagher, and his ex-teacher Mr. Antolini, who may have made a homosexual pass at him. Holden struggles with the concept of death throughout the book, finding himself confused and depressed by the thought of it. He is determined to protect his younger sister, Phoebe, from the harshness of the adult world, and ultimately decides to run away and live in the wilderness to protect her. The novel ends with Holden in a mental hospital recounting his experiences.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Coming-of-Age",
+      "tags": ["Fiction", "Cultural", "Psychological"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "the-hobbit.jpg",
+      "review": "The Hobbit is a fantasy novel by J.R.R. Tolkien, published in 1937. It follows the quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by the dragon, Smaug. Bilbo's journey takes him from a quiet and comfortable life in the Shire to the dark and dangerous forests and mountains of Middle-earth. Along the way, he encounters trolls, elves, goblins, and a mysterious creature named Gollum, who possesses a powerful and dangerous ring. The Hobbit is widely regarded as a classic of children's literature and has been adapted into several films, radio dramas, and video games. It is also considered a prelude to Tolkien's epic masterpiece, The Lord of the Rings, which takes place in the same fictional universe and expands on many of the themes and characters introduced in The Hobbit.",
+      "totalPages": 310,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Fiction", "Adventure", "Epic"],
+      "publisher": "Allen & Unwin",
+      "yearOfPublishing": 1937
+    }
+  ]

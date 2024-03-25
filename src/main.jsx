@@ -9,8 +9,10 @@ import {
 } from "react-router-dom";
 import Root from './Components/Roots/Root';
 import Home from './Components/Home/Home';
-import Book from './Components/Books/Book';
+
 import Error from './Components/Error Page/Error';
+import Book from './Components/Books/Book';
+
 
 
 const router = createBrowserRouter([
@@ -20,13 +22,14 @@ const router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home></Home>,
       },
       {
         path: "/listedBooks",
         element: <Book></Book>,
-      }
+        loader: () => fetch('Books.json'),
+      },
     ]
   }
 ]);
