@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import ListedBooks from "../Listed Books/ListedBooks";
+import Banner from '../Banner/Banner';
+
 
 
 const Book = () => {
@@ -16,6 +18,7 @@ const Book = () => {
 
   return (
     <div>
+      <Banner></Banner>
 
       <div className="mt-[100px]">
         <h2 className="text-[#131313] text-[40px] text-center">
@@ -23,13 +26,11 @@ const Book = () => {
         </h2>
       </div>
 
-  <div>
+  <div className="grid grid-cols-3 gap-6">
         {
         book.map(booksList => <ListedBooks bookList={booksList}></ListedBooks>)  
         }
     </div> 
-
-
 
     </div>
   );

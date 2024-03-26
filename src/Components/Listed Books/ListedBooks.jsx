@@ -1,11 +1,15 @@
 import { MdStarBorder } from "react-icons/md";
 import React from 'react';
 
+
 const ListedBooks = ({ bookList }) => {
-   const{bookName, bookId} = bookList;
+   const{bookId, bookName, author, image, review, rating, category, tags, publisher, yearOfPublishing} = bookList;
     return (
-      <div className="book-card grid grid-cols-3">
-<div className="card w-96 bg-base-100 shadow-xl ">
+      <div>
+        
+     
+
+<div className="card bg-base-100 shadow-xl w-[90%] mx-auto ">
   <figure className="px-10 pt-10">
     <img
       src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
@@ -22,16 +26,16 @@ const ListedBooks = ({ bookList }) => {
 
 
    <div className="border-b-2 border-dashed mt-2">
-   <h2 className="card-title text-[#131313] text-[24px]">The Catcher in the Rye</h2>
-    <p className="mb-[20px] mt-[16px] text-[16px] text-[#131313]">By : Awlad Hossain</p>
+   <h2 className="card-title text-[#131313] text-[24px]">{bookName}</h2>
+    <p className="mb-[20px] mt-[16px] text-[16px] text-[#131313]">By : {author}</p>
    </div>
 
     <div className="flex gap-40 mt-[20px]">
      <div>
-     <h2>Fiction</h2>
+     <h2>{category}</h2>
      </div>
     <div className="flex justify-center items-center gap-4 ">
-    <span>5.00</span>
+    <span>{rating}</span>
       <MdStarBorder></MdStarBorder>
     </div>
     </div>
@@ -40,6 +44,7 @@ const ListedBooks = ({ bookList }) => {
 
   </div>
 </div>
+
 </div>
     );
 };
