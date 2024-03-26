@@ -17,9 +17,9 @@ const ListedBooks = ({ bookList }) => {
 
   <div className="p-8">
 
-<div className="flex gap-3">
-    <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[30px] p-[5px]">Young Adult</p>
-    <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[30px] p-[5px]">Identity</p>
+<div className="flex gap-12">
+    <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[1]}</p>
+    <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[2]}</p>
 </div>
 
 
