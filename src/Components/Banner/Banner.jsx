@@ -10,7 +10,7 @@ const Banner = () => {
 
       <div>
       
-       <Link>
+       <Link to="/listedBooks">
        <button className="btn btn-primary mt-[48px]">View The List</button>
        </Link>
        
