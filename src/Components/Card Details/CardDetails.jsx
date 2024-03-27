@@ -1,8 +1,19 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
-
 import React from 'react';
+import { saveJobApplication } from '../Utility/LocalStorage';
 
 const CardDetails = () => {
+    const handleCardData = () => {
+
+        saveJobApplication(idInt);
+
+        toast('You have applied successfully');
+    }
+
+    const notify1 = () => toast("Already added this card");
+
         const allBooks = useLoaderData();
         const {bookId} = useParams();
         const idInt = parseInt(bookId);
@@ -20,7 +31,7 @@ const CardDetails = () => {
 
 
     return (
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 mt-[52px] w-[90%] mx-auto">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 mt-[52px] w-[90%] mx-auto ">
             
             <div className="flex justify-center items-center bg-slate-300 border rounded-[16px]">
                 <img src={image} alt="Shoes" className="p-12 w-[500px]"/>
@@ -32,7 +43,7 @@ const CardDetails = () => {
             <hr className="mt-2" />
             <h3 className="mt-2 mb-2">{category}</h3>
             <hr />
-            <p className="text-[#131313] mt-2"><span className="text-[#131313] text-[16px]">Review: </span>{review}</p>
+            <p className="text-[#131313] mt-3"><span className="text-[#131313] text-[16px]">Review: </span>{review}</p>
             <p></p>
 
             <div className="mt-2 flex gap-5  "> 
@@ -57,8 +68,10 @@ const CardDetails = () => {
         </div>
 
         <div className="flex gap-3">
-            <button className="btn btn-primary">Read</button>
-            <button className="btn btn-primary">Wishlist</button>
+           <button onClick={handleCardData} className="btn btn-primary">Read</button>
+            <ToastContainer />
+            <button onClick={notify1} className="btn btn-primary">Wishlist</button>
+            
         </div>
 
 

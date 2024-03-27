@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 
 const ListedBooks = ({ bookList }) => {
-   const{bookId, bookName, author, image, review, rating, category, tags, publisher, yearOfPublishing} = bookList;
+   const{bookId, bookName, author, image, rating, category, tags} = bookList;
     return (
 
 
-      <Link to={`/cardDetails/${bookId}`}>
-           <div className="card bg-base-100 border shadow-xl mt-8 ">
+      <Link to={`/cardDetails/${bookId}`} className="">
+  <div className="card bg-base-100 border shadow-xl mt-8 ">
   
   <figure className=" bg-slate-300 m-5 border rounded-lg">
     <img src={image} alt="Shoes" className="rounded-xl h-[350px] p-5 "/>
