@@ -8,8 +8,9 @@ const ListedBooks = ({ bookList }) => {
     return (
 
 
-      <Link to={`/cardDetails/${id}`} className="">
-  <div className="card bg-base-100 border shadow-xl mt-8 ">
+      <Link to={`/cardDetails/${id}`}>
+
+      <div className="card bg-base-100 border shadow-xl mt-8 ">
   
   <figure className=" bg-slate-300 m-5 border rounded-lg">
     <img src={image} alt="Shoes" className="rounded-xl h-[350px] p-5 "/>
@@ -17,10 +18,10 @@ const ListedBooks = ({ bookList }) => {
 
   <div className="p-8">
 
-<div className="flex gap-12">
-    <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[1]}</p>
-    <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[2]}</p>
-</div>
+      <div className="flex gap-12">
+          <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[1]}</p>
+          <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[2]}</p>
+      </div>
 
 
    <div className="border-b-2 border-dashed mt-2">
@@ -37,12 +38,10 @@ const ListedBooks = ({ bookList }) => {
       <MdStarBorder></MdStarBorder>
     </div>
     </div>
-
-
-
+    
   </div>
       </div>
-      
+
       </Link>
 
 

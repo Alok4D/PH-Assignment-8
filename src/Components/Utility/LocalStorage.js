@@ -1,8 +1,6 @@
 import { toast } from "react-toastify";
 
 
-
-
 export const SaveToLocalStroage = (data) => {
     let saveData = JSON.parse(localStorage.getItem("readAllReady")) || [];
     if (!Array.isArray(saveData)) {
@@ -12,10 +10,10 @@ export const SaveToLocalStroage = (data) => {
     if (existingDataIndex === -1) {
         saveData.push(data);
         localStorage.setItem("readAllReady", JSON.stringify(saveData));
-        
+        toast.success("Card Data Applied Successfully!")
     } 
     else {
-        toast.error("Read this all ready");
+        toast.error("Read this all ready!");
         
     }
 };

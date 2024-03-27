@@ -21,30 +21,13 @@ const CardDetails = () => {
 
    
     const handleReadData = () => {
-        
-        SaveToLocalStroage(job);
-       
+        SaveToLocalStroage(data);
     }
+
     const handleWishlist = () => {
-        setToLocalWishlist(job);
+        setToLocalWishlist(data);
     }
     const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = singleData || {};
-    
-        // const allBooks = useLoaderData();
-        // const {bookId} = useParams();
-        // const idInt = parseInt(bookId);
-        // const job = allBooks.find(u => u.bookId == idInt);
-        // console.log(job);
-        // const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = job;
-
-
-    // const allBooks = useLoaderData();
-    // console.log(allBooks)
-    // const {bookId} = useParams();
-    // const user = allBooks.find((u)=>u.bookId == bookId)
-    // console.log(user)
-    // const {author, bookName, image} = job;
-
 
     return (
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 mt-[52px] w-[90%] mx-auto ">
@@ -64,17 +47,18 @@ const CardDetails = () => {
 
             <div className="mt-2 flex gap-5  "> 
                 <p className="text-[#131313] text-[16px] p-[5px]">Tag</p>
+
                 <div className="flex gap-4">
                 {tags &&
                 tags.map((tag, index) => (
                   <h1
                     key={index}
-                    className="flex justify-center items-center w-[123px] h-[33px] rounded-[30px] bg-[#23BE0A0D] text-[#23BE0A]"
-                  >
+                    className="flex justify-center items-center w-[123px] h-[33px] rounded-[30px] bg-[#23BE0A0D] text-[#23BE0A]">
                     #{tag}
                   </h1>
                 ))}
                 </div>
+
                 {/* <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{}</p>
                 <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{}</p> */}
             </div>
@@ -98,7 +82,7 @@ const CardDetails = () => {
            <button onClick={handleReadData} className="btn btn-primary">Read</button>
            
             <button onClick={handleWishlist} className="btn btn-primary">Wishlist</button>
-            
+          
         </div>
 
 
