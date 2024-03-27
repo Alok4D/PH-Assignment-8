@@ -1,5 +1,3 @@
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { SaveToLocalStroage, setToLocalWishlist  } from '../Utility/LocalStorage';
@@ -7,11 +5,14 @@ import Hooks from "../View The List/Hooks/Hooks";
 
 const CardDetails = () => {
     const [singleData, setSingleData] = useState();
-    console.log(singleData);
+    
 
 
     const {id} = useParams();
     const {data, loading} = Hooks();
+
+    const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = singleData || {};
+   
     useEffect(() => {
         if (data) {
           const singleData = data?.find((item) => item.id == id);
@@ -22,12 +23,15 @@ const CardDetails = () => {
    
     const handleReadData = () => {
         SaveToLocalStroage(data);
+      
+      
     }
 
     const handleWishlist = () => {
         setToLocalWishlist(data);
+       
     }
-    const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = singleData || {};
+   
 
     return (
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 mt-[52px] w-[90%] mx-auto ">
@@ -45,7 +49,7 @@ const CardDetails = () => {
             <p className="text-[#131313] mt-3"><span className="text-[#131313] text-[16px]">Review: </span>{review}</p>
             <p></p>
 
-            <div className="mt-2 flex gap-5  "> 
+            <div className="mt-2 flex gap-5"> 
                 <p className="text-[#131313] text-[16px] p-[5px]">Tag</p>
 
                 <div className="flex gap-4">
@@ -79,8 +83,8 @@ const CardDetails = () => {
         </div>
 
         <div className="flex gap-3">
+
            <button onClick={handleReadData} className="btn btn-primary">Read</button>
-           
             <button onClick={handleWishlist} className="btn btn-primary">Wishlist</button>
           
         </div>

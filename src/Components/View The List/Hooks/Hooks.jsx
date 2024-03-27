@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Hooks = () => {
     const [data, setData] = useState([]);
-    const [loading, setLoading]=useState([]);
+    const [loading, setLoading]= useState([]);
 
     useEffect(() => {
         const CardData = async () =>{

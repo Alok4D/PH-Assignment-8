@@ -18,15 +18,11 @@ const ViewTheListBooks = () => {
     const storData = JSON.parse(localStorage.getItem('readAllReady')) || [];
     setData(storData);
   }, [])
-   
-
+  
   const {bookId, bookName} = data;
- 
 
     return (
-
         <>
-        
       <div className="h-[100px] bg-slate-300 border rounded-[16px] mt-[50px] mb-8 flex justify-center items-center">
         <h2 className="text-[#131313] text-[28px] ">Books</h2>
       </div>
