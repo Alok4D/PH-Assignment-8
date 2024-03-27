@@ -4,9 +4,9 @@ import { SaveToLocalStroage, setToLocalWishlist  } from '../Utility/LocalStorage
 import Hooks from "../View The List/Hooks/Hooks";
 
 const CardDetails = () => {
-    const [singleData, setSingleData] = useState();
-    
 
+
+    const [singleData, setSingleData] = useState();
 
     const {id} = useParams();
     const {data, loading} = Hooks();
@@ -22,7 +22,7 @@ const CardDetails = () => {
 
    
     const handleReadData = () => {
-        SaveToLocalStroage(data);
+        SaveToLocalStroage(singleData);
       
       
     }

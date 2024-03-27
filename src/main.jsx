@@ -16,6 +16,7 @@ import ViewTheListBooks from './Components/View The List/ViewTheListBooks';
 import Book from './Components/Books/Book';
 import CardDetails from './Components/Card Details/CardDetails';
 import PagesRead from './Components/Pages To Read/PagesRead';
+import BookDetails from './Components/View The List/Book Details/BookDetails';
 
 
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path: "/cardDetails/:id",
         element: <CardDetails></CardDetails>,
       
+      },
+      {
+        path: "/bookDetails",
+        element: <BookDetails></BookDetails>,
       },
 
       
