@@ -1,17 +1,17 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
-// Add React-Router..........
+// Add React-Router........
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Root from './Components/Roots/Root';
-
-
 import Error from './Components/Error Page/Error';
-
 import ViewTheListBooks from './Components/View The List/ViewTheListBooks';
 import Book from './Components/Books/Book';
 import CardDetails from './Components/Card Details/CardDetails';
@@ -30,17 +30,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Book></Book>,
-       
       },
 
       {
         path: "/listedBooks",
         element: <ViewTheListBooks></ViewTheListBooks>,
-        loader: () => fetch('/Books.json'),                                                                                                         
+                                                                                                               
       },
 
       {
-        path: "/cardDetails/:bookId",
+        path: "/cardDetails/:id",
         element: <CardDetails></CardDetails>,
         loader: () => fetch('/Books.json'),
       },
@@ -59,5 +58,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer></ToastContainer>,
   </React.StrictMode>,
 )

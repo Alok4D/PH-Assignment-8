@@ -1,50 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+
+import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { getStoredJobApplication } from '../Utility/LocalStorage';
+
 
 const ViewTheListBooks = () => {
   const jobs = useLoaderData();
+  console.log(jobs);
 
-  // console.log(jobs);
-  // const {bookId} = useParams();
-  // const user = jobs.find(u => u.id == bookId);
-  // const {bookName} = user;
-  // console.log(user);
+  const [data, setData] = useState([]);
+  console.log(data);
 
-  const [appliedJobs, setAppliedJobs] = useState([]);
-  const [displayJobs, setDisplayJobs] = useState([]);
+  useEffect( () => {
+    const storData = JSON.parse(localStorage.getItem('readAllReady')) || [];
+    setData(storData);
+  }, [])
+   
 
-  console.log(appliedJobs);
-
-  useEffect(() => {
-    const storedJobId = getStoredJobApplication();
-
-    if (jobs.length > 0) {
-
-      const jobsApplied = [];
-      for (const id of storedJobId) {
-        const job = jobs.find((job) => job.id === id);
-        if (job) {
-          jobsApplied.push(job);
-        }
-      }
-
-      setAppliedJobs(jobsApplied);
-      setDisplayJobs(jobsApplied);
-      // console.log(jobs, storedJobId, jobsApplied);
-    }
-  }, [jobs]);
+  const {bookId, bookName} = data;
+ 
 
     return (
         <>
-
-       
-        <h2>All Card Data : {appliedJobs.length}</h2>
-        
-       
-          <div className='book mt-[36px] text-center h-[100px] border rounded-[16px] bg-[#F3F3F3] flex justify-center items-center'>
-            <h2 className='text-[#131313] text-[28px]'>Books</h2>
-          </div>
+       <Tabs>
+    <TabList>
+      <Tab>Title 1</Tab>
+      <Tab>Title 2</Tab>
+    </TabList>
+      <h2>Name {bookName} </h2>
+    <TabPanel>
+    {
+      data?.map((item) => (<h1>{item.bookName}</h1>))
+    }
+    </TabPanel>
+    <TabPanel>
+      <h2>Any content 2</h2>
+    </TabPanel>
+  </Tabs>
         </>
     );
 };

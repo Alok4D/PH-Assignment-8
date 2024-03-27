@@ -1,25 +1,41 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
-import React from 'react';
-import { saveJobApplication } from '../Utility/LocalStorage';
+import React, { useEffect, useState } from 'react';
+import { SaveToLocalStroage, setToLocalWishlist  } from '../Utility/LocalStorage';
+import Hooks from "../View The List/Hooks/Hooks";
 
 const CardDetails = () => {
-    const handleCardData = () => {
+    const [singleData, setSingleData] = useState();
+    console.log(singleData);
 
-        saveJobApplication(idInt);
 
-        toast('You have applied successfully');
+    const {id} = useParams();
+    const {data, loading} = Hooks();
+    useEffect(() => {
+        if (data) {
+          const singleData = data?.find((item) => item.id == id);
+          setSingleData(singleData);
+        }
+      }, [data, id]);
+
+   
+    const handleReadData = () => {
+        
+        SaveToLocalStroage(job);
+       
     }
-
-    const notify1 = () => toast("Already added this card");
-
-        const allBooks = useLoaderData();
-        const {bookId} = useParams();
-        const idInt = parseInt(bookId);
-        const job = allBooks.find(u => u.bookId == idInt);
-        console.log(job);
-        const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = job;
+    const handleWishlist = () => {
+        setToLocalWishlist(job);
+    }
+    const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = singleData || {};
+    
+        // const allBooks = useLoaderData();
+        // const {bookId} = useParams();
+        // const idInt = parseInt(bookId);
+        // const job = allBooks.find(u => u.bookId == idInt);
+        // console.log(job);
+        // const {author, bookName, image, review, totalPages, publisher, yearOfPublishing, rating, category, tags} = job;
 
 
     // const allBooks = useLoaderData();
@@ -48,8 +64,19 @@ const CardDetails = () => {
 
             <div className="mt-2 flex gap-5  "> 
                 <p className="text-[#131313] text-[16px] p-[5px]">Tag</p>
-                <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[1]}</p>
-                <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{tags[2]}</p>
+                <div className="flex gap-4">
+                {tags &&
+                tags.map((tag, index) => (
+                  <h1
+                    key={index}
+                    className="flex justify-center items-center w-[123px] h-[33px] rounded-[30px] bg-[#23BE0A0D] text-[#23BE0A]"
+                  >
+                    #{tag}
+                  </h1>
+                ))}
+                </div>
+                {/* <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{}</p>
+                <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{}</p> */}
             </div>
 
         <div className="flex gap-[65px] mt-4">
@@ -68,9 +95,9 @@ const CardDetails = () => {
         </div>
 
         <div className="flex gap-3">
-           <button onClick={handleCardData} className="btn btn-primary">Read</button>
-            <ToastContainer />
-            <button onClick={notify1} className="btn btn-primary">Wishlist</button>
+           <button onClick={handleReadData} className="btn btn-primary">Read</button>
+           
+            <button onClick={handleWishlist} className="btn btn-primary">Wishlist</button>
             
         </div>
 

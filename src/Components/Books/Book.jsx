@@ -3,18 +3,22 @@
 import React, { useEffect, useState } from "react";
 import ListedBooks from "../Listed Books/ListedBooks";
 import Banner from '../Banner/Banner';
+import Hooks from "../View The List/Hooks/Hooks";
 
 
 
 const Book = () => {
   const [book, setBook] = useState([]);
 
-  useEffect(() => {
-    fetch("Books.json")
-      .then((res) => res.json())
-      .then((data) => setBook(data));
-  }, []);
-  console.log(book);
+  const {data, loading} = Hooks();
+
+
+  // useEffect(() => {
+  //   fetch("Books.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setBook(data));
+  // }, []);
+  // console.log(book);
 
   return (
     <div>
@@ -28,7 +32,7 @@ const Book = () => {
 
   <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-5 w-[90%] mx-auto">
         {
-        book.map(booksList => <ListedBooks bookList={booksList}></ListedBooks>)  
+        data.map(booksList => <ListedBooks key={booksList.id} bookList={booksList}></ListedBooks>)  
         }
     </div> 
 

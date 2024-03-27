@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 
 const ListedBooks = ({ bookList }) => {
-   const{bookId, bookName, author, image, rating, category, tags} = bookList;
+   const{id, bookName, author, image, rating, category, tags} = bookList;
     return (
 
 
-      <Link to={`/cardDetails/${bookId}`} className="">
+      <Link to={`/cardDetails/${id}`} className="">
   <div className="card bg-base-100 border shadow-xl mt-8 ">
   
   <figure className=" bg-slate-300 m-5 border rounded-lg">
