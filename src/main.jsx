@@ -17,6 +17,7 @@ import Book from './Components/Books/Book';
 import CardDetails from './Components/Card Details/CardDetails';
 import BookDetails from './Components/View The List/Book Details/BookDetails';
 import PagesToRead from './Components/Pages to Read/PagesToRead';
+import User from './Components/Users/User';
 
 
 const router = createBrowserRouter([
@@ -50,7 +51,11 @@ const router = createBrowserRouter([
       {
         path: "/pagesRead",
         element: <PagesToRead></PagesToRead>
-      }
+      },
+      {
+        path: "//user",
+        element: <User></User>,
+      },
      
    
     ]

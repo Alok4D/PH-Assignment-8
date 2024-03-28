@@ -8,6 +8,8 @@ const Header = () => {
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/listedBooks">Listed Books</NavLink></li>
     <li><NavLink to="/pagesRead">Pages to Read</NavLink></li>
+    <li><NavLink to="/user">Users</NavLink></li>
+
     
     </>
 
@@ -29,7 +31,7 @@ const Header = () => {
           <a className="btn btn-ghost text-[#131313] text-[28px]">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-3">
             {links}
           </ul>
         </div>
