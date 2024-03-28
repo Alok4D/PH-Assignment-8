@@ -5,9 +5,9 @@ import photo from '../../../public/Banner-photo/Banner-image.png';
 
 const Banner = () => {
   return (
-    <div className="banner mt-10 flex gap-20 bg-[#F3F3F3] h-[554px] w-[90%] mx-auto px-[120px] rounded-[24px]">
+    <div className="banner  mt-10 lg:flex gap-20 bg-[#F3F3F3] h-[554px] w-[90%] mx-auto lg:px-[120px] rounded-[24px]">
       <div className="banner-details mt-[136px]">
-        <h2 className="text-[#131313] text-[56px]">Books to freshen up<br /> your bookshelf</h2>
+        <h2 className="text-[#131313] lg:text-[56px] ">Books to freshen up<br /> your bookshelf</h2>
 
       <div>
       
@@ -19,7 +19,7 @@ const Banner = () => {
 
       </div>
 
-    <div className="banner-img mt-20">
+    <div className="banner-img lg:mt-20">
         <img src={photo} alt="" />
     </div>
 
