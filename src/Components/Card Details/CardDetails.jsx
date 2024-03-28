@@ -28,7 +28,7 @@ const CardDetails = () => {
     }
 
     const handleWishlist = () => {
-        setToLocalWishlist(data);
+        setToLocalWishlist(singleData);
        
     }
    
@@ -83,6 +83,7 @@ const CardDetails = () => {
         </div>
 
         <div className="flex gap-3">
+        
 
            <button onClick={handleReadData} className="btn btn-primary">Read</button>
             <button onClick={handleWishlist} className="btn btn-primary">Wishlist</button>

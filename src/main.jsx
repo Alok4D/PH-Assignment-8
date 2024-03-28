@@ -19,8 +19,6 @@ import PagesRead from './Components/Pages To Read/PagesRead';
 import BookDetails from './Components/View The List/Book Details/BookDetails';
 
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,7 +47,7 @@ const router = createBrowserRouter([
         path: "/bookDetails",
         element: <BookDetails></BookDetails>,
       },
-
+     
       
       {
         path: "/pagesRead",
