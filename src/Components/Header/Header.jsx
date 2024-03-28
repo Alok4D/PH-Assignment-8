@@ -33,7 +33,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <div className="navbar-end gap-4">
+        <div className="lg:navbar-end gap-4 ">
           <a className="btn text-[#FFF] text-[18px] bg-[#23BE0A] ">Sign In</a>
           <a className="btn text-[#FFF] text-[18px] bg-[#59C6D2]">Sign Up</a>
         </div>

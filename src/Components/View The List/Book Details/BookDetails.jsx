@@ -4,8 +4,6 @@ import "react-tabs/style/react-tabs.css";
 const BookDetails = ({ item }) => {
     const { bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing  } = item;
   return (
-   
-
       <div className="Listed-Books flex gap-7 sm:flex-col lg:flex-row border-[2px] rounded-lg mt-9 p-5">
         <div className="c-img w-[230px] bg-[#F3F3F3] flex justify-center items-center border rounded-[16px]">
           <img src={image} alt=""  className="w-[129px] h-[172px]"/>
@@ -15,21 +13,17 @@ const BookDetails = ({ item }) => {
           <h2 className="text-[#131313] text-[40px]">{bookName}</h2>
           <span  className="text-[#646262] text-[20px]">By : {author}</span>
 
+          <div className="flex justify-center items-center gap-5 mt-2 mb-2">
+              <p className="text-[#131313] text-[16px]">Tag</p>
+              <p className="text-[16px] text-[#23BE0A] bg-[#e6fae3] border rounded-[20px] px-[20px] py-[8px]">#{tags[1]}</p>
+                <p className="text-[16px] text-[#23BE0A] bg-[#e6fae3] border rounded-[20px]  px-[20px] py-[8px]">#{tags[2]}</p>
 
-          <div className="flex gap-5 pb-2">
-                            <p className="p-3 font-bold">Tag</p>
-                            <div className='p-3 flex gap-2'>
-                            <MdOutlineLocationOn></MdOutlineLocationOn>
-                                <div className='text-[#131313CC]'> Year of Publishing: <span className="font-bold">{yearOfPublishing}</span></div>
-                                
-                            </div>
+                <div className='flex justify-center items-center gap-2'>
+                  <MdOutlineLocationOn></MdOutlineLocationOn>
+                  <p className='text-[#131313CC]'> Year of Publishing: <span className="font-bold">{yearOfPublishing}</span></p>
+                </div>
 
           </div>
-
-
-
-
-
           <div className="flex gap-4 text-[16px]">
             <div className="flex gap-3 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

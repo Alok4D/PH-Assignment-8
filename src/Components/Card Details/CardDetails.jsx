@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { SaveToLocalStroage, setToLocalWishlist  } from '../Utility/LocalStorage';
 import Hooks from "../View The List/Hooks/Hooks";
@@ -23,13 +23,9 @@ const CardDetails = () => {
    
     const handleReadData = () => {
         SaveToLocalStroage(singleData);
-      
-      
     }
-
     const handleWishlist = () => {
         setToLocalWishlist(singleData);
-       
     }
    
 

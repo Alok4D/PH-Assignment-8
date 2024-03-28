@@ -32,7 +32,7 @@
 //     if (existingDataIndex === -1) {
 //         saveData.push(dwata);
 //         localStorage.setItem("WishListAllReady", JSON.stringify(saveData));
-        toast.success("Card Data Applied Successfully!");
+     
         
 //     } 
 //     else {

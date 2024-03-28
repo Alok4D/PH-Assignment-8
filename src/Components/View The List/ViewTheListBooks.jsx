@@ -1,9 +1,9 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-// import 'react-tabs/style/react-tabs.css';
 import { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import BookDetails from "./Book Details/BookDetails";
+import WishlistBooks from './Wishlist Books/WishlistBooks';
 
 
 
@@ -12,7 +12,9 @@ const ViewTheListBooks = () => {
   console.log(jobs);
 
   const [data, setData] = useState([]);
-  const [datas, setDatas] = useState([]);
+
+  const [wishListData, setWishListData] = useState([]);
+  console.log(wishListData);
 
 
   useEffect( () => {
@@ -20,20 +22,16 @@ const ViewTheListBooks = () => {
     setData(storData);
   }, [])
 
-  
   useEffect( () => {
-    const storData = JSON.parse(localStorage.getItem('WishListAllReady')) || [];
-    setData(storData);
+    const wishData = JSON.parse(localStorage.getItem('WishListAllReady')) || [];
+    setWishListData(wishData);
   }, [])
-  
-
-
 
     return (
         <>
  <div className='w-[90%] mx-auto'>
- <div className="h-[100px] bg-slate-300 border rounded-[16px] mt-[50px] mb-8 flex justify-center items-center">
-          <h2 className="text-[#131313] text-[28px] ">Books</h2>
+ <div className="h-[6.25rem] bg-slate-300 border rounded-[1rem] mt-[3.125rem] mb-8 flex justify-center items-center">
+          <h2 className="text-[#131313] text-[1.75rem] ">Books</h2>
   </div>
      
      <div className='text-center'>
@@ -58,9 +56,11 @@ const ViewTheListBooks = () => {
             data.map(item => <BookDetails key={item.id} item={item}></BookDetails>)
           }
     </TabPanel>
-
+   
     <TabPanel>
-     
+          {
+            wishListData.map(item => <WishlistBooks key={item.id} item={item}></WishlistBooks>)
+          }
     </TabPanel>
   </Tabs>
  </div>
