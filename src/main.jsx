@@ -18,6 +18,10 @@ import CardDetails from './Components/Card Details/CardDetails';
 import BookDetails from './Components/View The List/Book Details/BookDetails';
 import PagesToRead from './Components/Pages to Read/PagesToRead';
 import User from './Components/Users/User';
+import ViewDetails from './Components/View Details/ViewDetails';
+import ViewDetailsTwo from './Components/View Details Card two/ViewDetailsTwo';
+
+
 
 
 const router = createBrowserRouter([
@@ -32,7 +36,6 @@ const router = createBrowserRouter([
         element: <Book></Book>,
         
       },
-
       {
         path: "/listedBooks",
         element: <ViewTheListBooks></ViewTheListBooks>,
@@ -56,6 +59,17 @@ const router = createBrowserRouter([
         path: "//user",
         element: <User></User>,
       },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: () => fetch('/Books.json'),
+      },
+      {
+        path: "/cardDetailsTwo/:id",
+        element: <ViewDetailsTwo></ViewDetailsTwo>,
+        loader: () => fetch('/Books.json'),
+      },
+     
      
    
     ]

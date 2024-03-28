@@ -1,52 +1,3 @@
-// import { toast } from "react-toastify";
-
-// export const SaveToLocalStroage = (data) => {
-//     let saveData = JSON.parse(localStorage.getItem("readAllReady")) || [];
-//     if (!Array.isArray(saveData)) {
-//         saveData = [];
-//     }
-//     const existingDataIndex = saveData.findIndex((item) => item.id === data.id);
-//     if (existingDataIndex === -1) {
-//         saveData.push(data);
-//         localStorage.setItem("readAllReady", JSON.stringify(saveData));
-//         toast.success("Card Data Applied Successfully!")
-//     } 
-//     else {
-//         toast.error("Read this all ready!");
-        
-//     }
-// };
-// export const GetReadLocalStroge = () =>{
-//     const data = JSON.parse(localStorage.getItem("readAllReady")) || [];
-//     return data;
-// }
-
-
-
-// export const setToLocalWishlist = (dwata) => {
-//     let saveData = JSON.parse(localStorage.getItem("WishListAllReady")) || [];
-//     if (!Array.isArray(saveData)) {
-//         saveData = [];
-//     }
-//     const existingDataIndex = saveData.findIndex((item) => item.id === dwata.id);
-//     if (existingDataIndex === -1) {
-//         saveData.push(dwata);
-//         localStorage.setItem("WishListAllReady", JSON.stringify(saveData));
-     
-        
-//     } 
-//     else {
-//         toast.error("Read this all ready");
-        
-//     }  
-// }
-// export  const setToLocalWishlists =()=>{
-//     const dwata = JSON.parse(localStorage.getItem("WishListAllReady")) || [];
-//     return dwata;
-// }
-
-// 
-
 import { toast } from "react-toastify";
 
 export const SaveToLocalStroage = (data) => {
@@ -60,10 +11,10 @@ export const SaveToLocalStroage = (data) => {
        
         saveData.push(data);
         localStorage.setItem("readAllReady", JSON.stringify(saveData));
-        toast.success("Card Data Applied Successfully!");
+        toast.success("Book Added to Read List");
     } 
     else {
-        toast.error("Read this already!");
+        toast.error("You have Already Read this book!");
     }
 };
 export const GetReadLocalStorage = () => {
@@ -83,10 +34,10 @@ export const setToLocalWishlist = (data) => {
     if (existingDataIndex === -1) {
         saveData.push(data);
         localStorage.setItem("WishListAllReady", JSON.stringify(saveData));
-        toast.success("Card Data Applied Successfully!");
+        toast.success("Book Added to Read List");
     } 
     else {
-        toast.error("Already in the wishlist");
+        toast.error("You have Already Read this book!");
     }
 };
 

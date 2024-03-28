@@ -1,8 +1,13 @@
 import { MdOutlineLocationOn } from "react-icons/md";
 import "react-tabs/style/react-tabs.css";
 
+
+import { Link } from "react-router-dom";
+
 const BookDetails = ({ item }) => {
-    const { bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing  } = item;
+
+
+    const {id, bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing  } = item;
   return (
       <div className="Listed-Books flex gap-7 sm:flex-col lg:flex-row border-[2px] rounded-lg mt-9 p-5">
         <div className="c-img w-[230px] bg-[#F3F3F3] flex justify-center items-center border rounded-[16px]">
@@ -57,7 +62,9 @@ const BookDetails = ({ item }) => {
             <p className="text-[#328EFF] text-4 px-[11px] py-[12px] bg-[#a5c9f5] rounded-[30px]">Category: {category}</p>
             <p className="text-[#FFAC33] text-4 px-[11px] py-[12px] bg-[#fdf3f3] rounded-[30px]">Rating: {rating}</p>
             
-            <button className="text-[#FFF] text-[18px] px-[20px] py-[10px] bg-[#23BE0A] border rounded-[30px]">View Details</button>
+           <Link to={`/viewDetails/${id}`}>
+           <button className="text-[#FFF] text-[18px] px-[20px] py-[10px] bg-[#23BE0A] border rounded-[30px]">View Details</button>
+           </Link>
            
            
           </div>

@@ -16,7 +16,7 @@ const Book = () => {
 
       <div className="mt-[100px]">
         <h2 className="text-[#131313] text-[40px] text-center">
-          Books {data.length}
+          Books 
         </h2>
       </div>
 
