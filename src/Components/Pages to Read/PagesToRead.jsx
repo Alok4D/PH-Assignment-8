@@ -65,22 +65,16 @@ const TriangleBar = (props) => {
 const PagesToRead = () => {
     const [chart, setChart] = useState([]);
     console.log(chart);
-   
-
     useEffect(() => {
         const saveData = JSON.parse(localStorage.getItem("readAllReady")) || [];
         setChart(saveData);
-       
       }, []);
 
-  
-
-
     return (
-        <div>
-            <BarChart
-      width={1500}
-      height={500}
+        <div className='w-[90%]  mx-auto bg-[#F3F3F3] mt-8'>
+            <BarChart className='p-5'
+      width={1700}
+      height={700}
       data={chart}
       margin={{
         top: 20,
