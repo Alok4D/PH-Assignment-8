@@ -1,0 +1,9 @@
+.custom-negative-margin {
+    margin-left: -250px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .custom-negative-margin {
+      margin-left: 20px;
+    }
+  }

@@ -13,7 +13,7 @@ const ListedBooks = ({ bookList }) => {
       <div className="card bg-base-100 border shadow-xl mt-8 ">
   
   <figure className=" bg-slate-300 m-5 border rounded-lg">
-    <img src={image} alt="Shoes" className="rounded-xl h-[350px] p-5 "/>
+    <img src={image} alt="Shoes" className="rounded-xl h-[350px]  p-5 "/>
   </figure>
 
   <div className="p-8">

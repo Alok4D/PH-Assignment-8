@@ -26,6 +26,20 @@ export const GetReadLocalStorage = () => {
 
 
 export const setToLocalWishlist = (data) => {
+
+    let saveReadData = JSON.parse(localStorage.getItem("readAllReady")) || [];
+    if (!Array.isArray(saveReadData)) {
+        saveReadData = [];
+    }
+    const existingReadDataIndex = saveReadData.findIndex((item) => item.id === data.id);
+    console.log(existingReadDataIndex);
+    if (existingReadDataIndex !== -1) {
+        toast.error("You have Already Read this book!");  
+     return;
+    } 
+    
+ 
+
     let saveData = JSON.parse(localStorage.getItem("WishListAllReady")) || [];
     if (!Array.isArray(saveData)) {
         saveData = [];

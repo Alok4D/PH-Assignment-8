@@ -64,7 +64,7 @@ const WishlistBooks = ({item}) => {
           <p className="text-[#328EFF] text-4 px-[11px] py-[12px] bg-[#a5c9f5] rounded-[30px]">Category: {category}</p>
           <p className="text-[#FFAC33] text-4 px-[11px] py-[12px] bg-[#fdf3f3] rounded-[30px]">Rating: {rating}</p>
           
-         <Link to={`/cardDetailsTwo/:${id}`}>
+         <Link to={`/cardDetailsTwo/${id}`}>
          <button className="text-[#FFF] text-[18px] px-[20px] py-[10px] bg-[#23BE0A] border rounded-[30px]">View Details</button>
          </Link>
          

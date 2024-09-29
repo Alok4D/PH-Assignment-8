@@ -30,10 +30,10 @@ const CardDetails = () => {
    
 
     return (
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-12 mt-[52px] w-[90%] mx-auto ">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mt-[52px] w-[90%] mx-auto ">
             
             <div className="flex justify-center items-center bg-slate-300 border rounded-[16px]">
-                <img src={image} alt="Shoes" className="p-12 w-[500px]"/>
+                <img src={image} alt="Shoes" className="lg:p-12 p-5 lg:w-[500px] w-[300px]"/>
             </div>
 
         <div className="c-details">
@@ -48,7 +48,7 @@ const CardDetails = () => {
             <div className="mt-2 flex gap-5"> 
                 <p className="text-[#131313] text-[16px] p-[5px]">Tag</p>
 
-                <div className="flex gap-4">
+                <div className="grid lg:grid-cols-3 grid-cols-2 gap-4">
                 {tags &&
                 tags.map((tag, index) => (
                   <h1
@@ -59,8 +59,7 @@ const CardDetails = () => {
                 ))}
                 </div>
 
-                {/* <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{}</p>
-                <p className="text-[16px] text-[#23BE0A] bg-[#f8f7f7] border rounded-[20px] p-[5px]">#{}</p> */}
+               
             </div>
 
         <div className="flex gap-[65px] mt-4">
